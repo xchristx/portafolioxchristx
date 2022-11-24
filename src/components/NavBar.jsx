@@ -1,6 +1,4 @@
 import * as React from 'react';
-
-import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -13,9 +11,9 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import { capitalize, Link } from '@mui/material';
-// MuiClassNameSetup.js
+import { capitalize, Link, Menu, MenuItem } from '@mui/material';
+
+
 
 const drawerWidth = 240;
 const navItems = ['home', 'works', 'about Me', 'contact'];
@@ -29,7 +27,7 @@ function NavBar (props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', bgcolor:'transparent' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', bgcolor:'white',zIndex:100 }}>
       <Typography variant="h6" sx={{ my: 2 }}>
         MUI
       </Typography>
@@ -47,7 +45,6 @@ function NavBar (props) {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
-  
 
   return (
     <Box id='menu-appbar'  sx={{ display: 'flex', }}>
@@ -67,14 +64,14 @@ function NavBar (props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            
+            Christian Aguilar
           </Typography>
           <Box id='link' sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Link key={item} 
                     href={`#${item.replace(' ','')}`} 
                     data-menuanchor={`#${item.replace(' ','')}`} 
-                    className ={'active'}
+                    className = "active"
                     sx={{ color: '#fff', m:'10px', textDecoration:'none', fontSize:'17px' }}>
                 {capitalize(item)}
               </Link>
@@ -86,13 +83,14 @@ function NavBar (props) {
         <Drawer
           container={container}
           variant="temporary"
+          id='menu-appbar'
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: { xs: 'block', sm: 'none',zIndex:500 },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
