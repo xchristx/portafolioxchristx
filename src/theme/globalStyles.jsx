@@ -49,6 +49,9 @@ export default function GlobalStyles() {
           margin: 0,
           padding: 0,
         },
+        "Link .active":{
+          color:'red'
+        }
       }}
     />
   );

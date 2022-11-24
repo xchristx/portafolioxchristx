@@ -11,6 +11,7 @@ import GlobalStyles from './globalStyles';
 import customShadows from './customShadows';
 import componentsOverride from './overrides';
 
+import Futura from '../fonts/FuturaLigth.ttf'
 // ----------------------------------------------------------------------
 
 ThemeProvider.propTypes = {
@@ -25,6 +26,7 @@ export default function ThemeProvider({ children }) {
       typography,
       shadows: shadows(),
       customShadows: customShadows(),
+
     }),
     []
   );

@@ -1,3 +1,4 @@
+import FuturaTtf from '../fonts/FuturaLigth.ttf'
 // ----------------------------------------------------------------------
 
 export function remToPx(value) {
@@ -24,7 +25,7 @@ export function responsiveFontSizes({ sm, md, lg }) {
 
 // ----------------------------------------------------------------------
 
-const FONT_PRIMARY = 'roboto'; // Google Font
+const FONT_PRIMARY = 'Jost'; // Google Font
 // const FONT_SECONDARY = 'CircularStd, sans-serif'; // Local Font
 
 const typography = {

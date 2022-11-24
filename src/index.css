@@ -1,5 +1,8 @@
-body {
-  font-family: arial, helvetica;
+#link .active{
+  color: red
+}
+#fp-nav ul li a span {
+  background: '#fff';
 }
 
 h3 {
@@ -9,9 +12,7 @@ h3 {
   font-weight: 700;
 }
 
-#section1 {
-  color: #fff;
-}
+
 .section{
   height: 100vh;
   

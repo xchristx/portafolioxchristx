@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -13,9 +14,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { capitalize, Link } from '@mui/material';
+// MuiClassNameSetup.js
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['home', 'works', 'about Me', 'contact'];
 
 function NavBar (props) {
   const { window } = props;
@@ -44,10 +47,11 @@ function NavBar (props) {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
+  
 
   return (
-    <Box sx={{ display: 'flex', }}>
-      <AppBar component="nav" sx={{ bgcolor:t=>t.palette.grey['900'],color:'white' }} >
+    <Box id='menu-appbar'  sx={{ display: 'flex', }}>
+      <AppBar component="nav" sx={{ bgcolor:'transparent', color:'white', boxShadow:0 }} >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -63,13 +67,17 @@ function NavBar (props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
+            
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box id='link' sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
-              </Button>
+              <Link key={item} 
+                    href={`#${item.replace(' ','')}`} 
+                    data-menuanchor={`#${item.replace(' ','')}`} 
+                    className ={'active'}
+                    sx={{ color: '#fff', m:'10px', textDecoration:'none', fontSize:'17px' }}>
+                {capitalize(item)}
+              </Link>
             ))}
           </Box>
         </Toolbar>
