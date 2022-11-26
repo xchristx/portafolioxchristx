@@ -1,7 +1,48 @@
 
-/* #fp-nav ul li a span {
-  background: '#fff';
-} */
+#fp-nav {
+  position: fixed;
+  z-index: 25;
+
+  opacity: 1;
+  transition: all 5s linear;
+}
+#fp-nav.fp-right {
+  right: 17px;
+}
+#fp-nav.fp-left {
+  left: 17px;
+}
+
+#fp-nav ul li a span {
+  
+  background-color: transparent;
+
+}
+#fp-nav ul li a.active  {
+
+    height: 3px;
+    width: 25px;
+    background: #fff;
+
+
+}
+#fp-nav ul li a  {
+
+    height: 3px;
+    width: 15px;
+    background: #fff;
+}
+.fp-slidesNav {
+  position: absolute;
+  z-index: 4;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  left: 0 !important;
+  right: 0;
+  margin: 0 auto !important;
+} 
 
 h3 {
   font-size: 5em;
@@ -11,11 +52,51 @@ h3 {
 }
 
 
-.section{
+/* .section{
   height: 100vh;
   
+} */
+
+/* .fp-section {
+  background-color: black;
+} */
+
+hr {
+  border: 0;
+  margin: 1.35em auto;
+  max-width: 100%;
+  background-position: 50%;
+  box-sizing: border-box;
+
 }
 
-.fp-section {
-  text-align: center;
+.bookends {
+  position: relative;
+  border-width: 5px;
+  border-color: hsl(0, 0%, 50%) transparent;
+  height: 11px;
+  border-style: double;
+  width: 20%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.bookends:before,
+.bookends:after {
+  position: absolute;
+  bottom: -3.536px;
+  width: 7.071px;
+  height: 7.071px;
+  display: block;
+  border-width: 0 7.071px 7.071px 0;
+  border-color: hsl(0, 0%, 50%);
+  border-style: double;
+  box-sizing: border-box;
+}
+.bookends:before {
+  transform: translateZ(0) rotate(-45deg);
+  left: -21px;
+}
+.bookends:after {
+  transform: translateZ(0) rotate(135deg);
+  right: -21px;
 }

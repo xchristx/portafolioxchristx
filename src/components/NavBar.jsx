@@ -12,11 +12,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { capitalize, Link, Menu, MenuItem } from '@mui/material';
+import {Link as RouterLink} from 'react-router-dom'
 
 
 
 const drawerWidth = 240;
-const navItems = ['home', 'works', 'about Me', 'contact'];
+const navItems = ['home', 'proyects', 'about Me', 'contact'];
 
 function NavBar (props) {
   const { window } = props;
@@ -48,31 +49,32 @@ function NavBar (props) {
 
   return (
     <Box id='menu-appbar'  sx={{ display: 'flex', }}>
-      <AppBar component="nav" sx={{ bgcolor:'transparent', color:'white', boxShadow:0 }} >
+      <AppBar component="nav" sx={{ bgcolor:'transparent', color:'white', boxShadow:0, mt:2,}} >
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 3, display: { sm: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+
+          <Link
+            variant="title"
+            href = "#home"
+            sx={{ color: '#fff',  textDecoration:'none', flexGrow: 1,cursor:'pointer', fontSize:'23px', display: { xs: 'none', sm: 'block' }, letterSpacing:1.5, ml:2,  }}
           >
-            Christian Aguilar
-          </Typography>
+            CHRISTIAN
+          </Link>
           <Box id='link' sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Link key={item} 
                     href={`#${item.replace(' ','')}`} 
                     data-menuanchor={`#${item.replace(' ','')}`} 
                     className = "active"
-                    sx={{ color: '#fff', m:'10px', textDecoration:'none', fontSize:'17px' }}>
+                    sx={{ color: '#fff', m:'10px', textDecoration:'none', fontSize:'23px' }}>
                 {capitalize(item)}
               </Link>
             ))}

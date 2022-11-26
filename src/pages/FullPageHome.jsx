@@ -1,23 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
-import { Box, capitalize, Typography } from '@mui/material';
+import { Box, capitalize, Container, Typography } from '@mui/material';
 
-const anchors = ["home", "works", "aboutMe"];
-export const FullPageHome = () => (
-  <ReactFullpage
+import WOW from 'wowjs';
+import { Home } from '../components/Home';
+import { Works } from '../components/Works';
+import FondoWorks from '../assets/works.jpg'
+import { AboutMe } from '../components/AboutMe';
+import { Contact } from '../components/Contact';
+
+const anchors = ["home", "proyects", "aboutMe",'contact'];
+
+
+export const FullPageHome = () => {
+
+  useEffect(() => {
+    new WOW.WOW({
+      live: false
+    }).init();
+  }, [])
+
+   return ( <ReactFullpage
     //fullpage options
-    scrollingSpeed = {400} /* Options here */
+    scrollingSpeed = {900} /* Options here */
     anchors={anchors}
     navigation
     css3
     autoScrolling
     fitToSection
     fitToSectionDelay={300}
-    // easing='easeInOutCubic'
-    // easingcss3='ease-out'
-    // menu='#menu-appbar'
+    easing='easeInOutCubic'
+    easingcss3='ease-out'
+    menu='#menu-appbar'
     navigationTooltips={anchors.map(e=>capitalize(e))}
-    sectionsColor={["#061F3E","#000","#29a" ]}
+    // sectionsColor={["#061F3E","#000","#29a" ]}
 
     render={({ state, fullpageApi }) => {
       return (
@@ -25,20 +41,27 @@ export const FullPageHome = () => (
         <ReactFullpage.Wrapper >
           
           <Box sx={{width:'100%'}} className="section">
-            <Typography className='active' sx={{ fontSize:50, fontStyle: 'bold' }}>web designer (welcome to fullpage.js)</Typography>
-            <button onClick={() => fullpageApi.moveSectionDown()}>
-              Click me to move down
-            </button>
+            <Home />
           </Box>
-          <Box className="section">
-            <p>Section 2</p>
+
+          <Box className="section" 
+                // sx={{ backgroundImage:`url(${FondoWorks})`, backgroundSize:'cover', zIndex:5 }} 
+                sx={{ bgcolor:'#0A0E18', zIndex:5 }} 
+          >
+            <Works />
           </Box>
-          <Box className="section">
-            <p>Section 2</p>
+
+          <Box className="section" sx={{ bgcolor:'#0A0E18', zIndex:5 }}>
+            <AboutMe />
           </Box>
+
+          <Box className="section" sx={{ bgcolor:'#0A0E18', zIndex:5 }}>
+            <Contact />
+          </Box>
+
         </ReactFullpage.Wrapper>
       </>
       );
     }}
-  />
-);
+  />)
+};
