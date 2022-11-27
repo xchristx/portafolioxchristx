@@ -1,7 +1,43 @@
 import React from 'react'
+import { Grid, Box, Typography, CardMedia } from '@mui/material'
+import Chris from '../assets/christian.png'
+import './AboutBackGroud.scss'
 
 export const AboutMe = () => {
   return (
-    <div sx={{bgcolor:'grey'}} >as</div>
+    <>
+    <Box  >
+      <div className="stars"></div>
+      <div className="twinkling"></div>
+      <div className="clouds"></div>
+      <Grid container >
+          <Grid item xs={12} md={6} sx={{ zIndex:20, pl:{xs:2, md:15}}} >
+            <Typography variant='h2' sx={{ letterSpacing: 15, textAlign:'center',   }} >
+              ABOUT ME <br/>
+            </Typography>
+            <Typography variant='body2' sx={{fontSize:{xs:'0.8rem',md: '1rem'}, pr:{xs:5, md:2},pb:3  }} >
+            <br/>Hi! I'm Christian, a Front-end developer on constant formation with passion for technology and investigation.<br/>
+            My objectives are:<br/><br/>
+            - Create friendly apps with great impact on the users<br/>
+            - Be part of a team that alllows me to continue learning and growing professionally<br/><br/>
+
+            What's the added value I offer?<br/><br/>
+
+            With me you'll get a programmer with great problem solving capacity, able to work in a team, proactive, that brings his ideas and will to surpass himself day after day.
+            </Typography>
+
+          </Grid>
+          <Grid item xs={12} md={6} sx={{ zIndex:200,display:'flex', justifyContent:'center', alignItems:'center'}} >
+            <Box sx={{maxWidth:'50%', }} >
+              <CardMedia
+                component='img'
+                image={Chris}
+                sx={{objectFit:'cover' }} 
+              />
+            </Box>
+          </Grid>
+      </Grid>
+    </Box>
+    </>
   )
 }

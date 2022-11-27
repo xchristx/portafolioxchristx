@@ -33,7 +33,6 @@ export const FullPageHome = () => {
     easingcss3='ease-out'
     menu='#menu-appbar'
     navigationTooltips={anchors.map(e=>capitalize(e))}
-    // sectionsColor={["#061F3E","#000","#29a" ]}
 
     render={({ state, fullpageApi }) => {
       return (
@@ -46,12 +45,12 @@ export const FullPageHome = () => {
 
           <Box className="section" 
                 // sx={{ backgroundImage:`url(${FondoWorks})`, backgroundSize:'cover', zIndex:5 }} 
-                sx={{ bgcolor:'#0A0E18', zIndex:5 }} 
+                sx={{ zIndex:5 }} 
           >
             <Works />
           </Box>
 
-          <Box className="section" sx={{ bgcolor:'#0A0E18', zIndex:5 }}>
+          <Box className="section" >
             <AboutMe />
           </Box>
 

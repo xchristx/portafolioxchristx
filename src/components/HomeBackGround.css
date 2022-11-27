@@ -12,7 +12,7 @@
     padding: 0px auto;
 }
 
-#container-inside {
+/* #container-inside {
     position: relative;
     min-width: 960px;
     max-width: 100%;
@@ -21,7 +21,7 @@
     margin: 0px auto;
     padding: 0px auto;
     overflow: visible;
-}
+} */
 
 #circle-small {
     -webkit-animation: circle-small-scale 3s ease-in-out infinite alternate;
@@ -29,11 +29,9 @@
 	animation-timing-function: cubic-bezier(.6, 0, .4, 1);
 	animation-delay: 0s;
 	position: absolute;
-	top: 29%;
-	left: -150px;
     background: #fff;
-    width: 300px;
-    height: 300px;
+    /* width: 300px; */
+    /* height: 300px; */
     border-radius: 50%;
     opacity: 0.4;
 }
@@ -44,11 +42,9 @@
 	animation-timing-function: cubic-bezier(.6, 0, .4, 1);
 	animation-delay: 0.3s;
 	position: absolute;
-	top: 50px;
-	left: -300px;
     background: #fff;
-    width: 600px;
-    height: 600px;
+    /* width: 600px;
+    height: 600px; */
     border-radius: 50%;
     opacity: 0.3;
 }
@@ -59,11 +55,11 @@
 	animation-timing-function: cubic-bezier(.6, 0, .4, 1);
 	animation-delay: 0.6s;
 	position: absolute;
-	top: -100px;
-	left: -450px;
+	/* top: -100px; */
+	/* left: -450px; */
     background: #fff;
-    width: 900px;
-    height: 900px;
+    /* width: 900px;
+    height: 900px; */
     border-radius: 50%;
     opacity: 0.2;
 }
@@ -74,11 +70,11 @@
 	animation-timing-function: cubic-bezier(.6, 0, .4, 1);
 	animation-delay: 0.9s;
 	position: absolute;
-	top: -250px;
-	left: -600px;
+	/* top: -250px;
+	left: -600px; */
     background: #fff;
-    width: 1200px;
-    height: 1200px;
+    /* width: 1200px;
+    height: 1200px; */
     border-radius: 50%;
     opacity: 0.1;
 }
@@ -89,11 +85,11 @@
 	animation-timing-function: cubic-bezier(.6, 0, .4, 1);
 	animation-delay: 1.2s;
 	position: absolute;
-	top: -400px;
-	left: -750px;
+	/* top: -400px;
+	left: -750px; */
     background: #fff;
-    width: 1500px;
-    height: 1500px;
+    /* width: 1500px;
+    height: 1500px; */
     border-radius: 50%;
     opacity: 0.05;
 }
