@@ -1,8 +1,8 @@
 #container{
     background: #000;
-    background: -moz-linear-gradient(-45deg, #000 0%, #000 100%);
-    background: -webkit-linear-gradient(-45deg, #3f8da7 0%,#000 100%);
-    background: linear-gradient(135deg, rgb(161, 67, 67) 0%,#000 100%);
+    background: -moz-linear-gradient(-45deg, #bb4951 0%,rgb(2, 2, 2) 100%);
+    background: -webkit-linear-gradient(-45deg, #bb4951 0%,rgb(2, 2, 2) 100%);
+    background: linear-gradient(135deg, #972d34 0%,#000 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#000',GradientType=1 );
     position: absolute;
     height: 100%;

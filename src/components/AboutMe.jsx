@@ -12,7 +12,7 @@ export const AboutMe = () => {
       <div className="clouds"></div>
       <Grid container >
           <Grid item xs={12} md={6} sx={{ zIndex:20, pl:{xs:2, md:15}}} >
-            <Typography variant='h2' sx={{ letterSpacing: 15, textAlign:'center',   }} >
+            <Typography variant='h2' sx={{ letterSpacing: 10, textAlign:'center',color:'#FF4D5A', fontWeigth:900   }} >
               ABOUT ME <br/>
             </Typography>
             <Typography variant='body2' sx={{fontSize:{xs:'0.8rem',md: '1rem'}, pr:{xs:5, md:2},pb:3  }} >

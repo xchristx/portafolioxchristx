@@ -49,7 +49,7 @@ export const Works = ()=>{
                     <Typography variant='body1' sx={{ color:'#fff ',letterSpacing:15,  fontSize: { xs:'30px', md:'60px'}, fontWeight:900}} >
                         E-COMMERCE
                     </Typography>
-                    <Typography variant='body1' sx={{ color:'#64B98B ', letterSpacing:10, fontSize: { xs:'40px', md:'80px'}, fontWeight:900,mb:'5%' }} >
+                    <Typography variant='body1' sx={{ color:'#FF4D5A ', letterSpacing:10, fontSize: { xs:'40px', md:'80px'}, fontWeight:900,mb:'5%' }} >
                         HEALTHY SHOP
                     </Typography>
                     <hr className="bookends" />
@@ -80,7 +80,7 @@ export const Works = ()=>{
                     <Typography variant='body1' sx={{ color:'#fff ',letterSpacing:10,  fontSize: '17px', fontWeight:900}} >
                         E-COMMERCE
                     </Typography>
-                    <Typography variant='body1' sx={{ color:'#64B98B ', letterSpacing:6, fontSize: '29px', fontWeight:900, }} >
+                    <Typography variant='body1' sx={{ color:'#FF4D5A ', letterSpacing:6, fontSize: '29px', fontWeight:900, }} >
                         HEALTHY SHOP
                     </Typography>
                     <hr className="bookends" />

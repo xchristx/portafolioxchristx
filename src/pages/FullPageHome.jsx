@@ -4,7 +4,6 @@ import { Box, capitalize, Container, Typography } from '@mui/material';
 
 import { Home } from '../components/Home';
 import { Works } from '../components/Works';
-import FondoWorks from '../assets/works.jpg'
 import { AboutMe } from '../components/AboutMe';
 import { Contact } from '../components/Contact';
 
