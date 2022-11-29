@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Box, capitalize, Container, Typography } from '@mui/material';
 
-import WOW from 'wowjs';
 import { Home } from '../components/Home';
 import { Works } from '../components/Works';
 import FondoWorks from '../assets/works.jpg'
@@ -13,12 +12,6 @@ const anchors = ["home", "proyects", "aboutMe",'contact'];
 
 
 export const FullPageHome = () => {
-
-  useEffect(() => {
-    new WOW.WOW({
-      live: false
-    }).init();
-  }, [])
 
    return ( <ReactFullpage
     //fullpage options
@@ -35,17 +28,18 @@ export const FullPageHome = () => {
     navigationTooltips={anchors.map(e=>capitalize(e))}
 
     render={({ state, fullpageApi }) => {
+
       return (
       <>
         <ReactFullpage.Wrapper >
           
-          <Box sx={{width:'100%'}} className="section">
+          <Box sx={{width:'100%',}} className="section">
             <Home />
           </Box>
 
           <Box className="section" 
                 // sx={{ backgroundImage:`url(${FondoWorks})`, backgroundSize:'cover', zIndex:5 }} 
-                sx={{ zIndex:5 }} 
+                sx={{ zIndex:5, display:'flex', alignItems:'center', justifyContent:'center', width:'100vh' }} 
           >
             <Works />
           </Box>

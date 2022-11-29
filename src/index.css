@@ -1,4 +1,5 @@
 
+
 #fp-nav {
   position: fixed;
   z-index: 25;
@@ -13,25 +14,15 @@
   left: 17px;
 }
 
-#fp-nav ul li a span {
+/* #fp-nav ul li a span {
   
   background-color: transparent;
 
-}
-#fp-nav ul li a.active  {
-
-    height: 3px;
-    width: 25px;
-    background: #fff;
-
-
-}
-#fp-nav ul li a  {
-
-    height: 3px;
-    width: 15px;
+} */
+#fp-nav ul li a span  {
     background: #fff;
 }
+
 .fp-slidesNav {
   position: absolute;
   z-index: 4;
@@ -76,9 +67,10 @@ hr {
   border-color: hsl(0, 0%, 50%) transparent;
   height: 11px;
   border-style: double;
-  width: 20%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  width: 30%;
+
+
+  z-index: 400;
 }
 .bookends:before,
 .bookends:after {

@@ -27,12 +27,12 @@ export const AboutMe = () => {
             </Typography>
 
           </Grid>
-          <Grid item xs={12} md={6} sx={{ zIndex:200,display:'flex', justifyContent:'center', alignItems:'center'}} >
-            <Box sx={{maxWidth:'50%', }} >
+          <Grid item xs={12} md={6} sx={{ zIndex:200,display:'flex', justifyContent:'center', alignItems:'center', }} >
+            <Box sx={{maxWidth:'50%',  }} >
               <CardMedia
                 component='img'
                 image={Chris}
-                sx={{objectFit:'cover' }} 
+                sx={{objectFit:'cover', boxShadow: '0px 1px 8px 3px #0A95CF' }} 
               />
             </Box>
           </Grid>
