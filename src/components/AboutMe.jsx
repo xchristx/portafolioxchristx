@@ -14,10 +14,10 @@ export const AboutMe = () => {
   useLayoutEffect(() => {
       let ctx = gsap.context(() => {
           if (location.hash == '#aboutMe'){
-              tl.from('.imageAB', { opacity: 0, duration:1, x:1000,  scaleX:0, scaleY:0,  stagger:0.3, ease: Power3.easeOut })
+              tl.from('.imageAB', { y: '2rem', opacity: 0,duration:1, stagger:0.1, ease: Power3.easeIn })
               .from('.contentAB', { x:-100, y: '2rem', opacity: 0,duration:1, stagger:0.1, ease: Power3.easeIn }, '-=1.5');
           }else {
-              tl.to('.imageAb', { opacity: 0, duration:0.7, x:100, stagger:0.3, ease: Power3.easeOut })
+              tl.to('.imageAB', { opacity: 0, duration:0.7, y:-100, stagger:0.3, ease: Power3.easeOut })
               .to('.contentAB', { x: '2rem', opacity: 0,duration:0.6, stagger:0.1, ease: Power3.easeIn }, '-=1.5');
           }
       }, root); 
@@ -37,13 +37,13 @@ export const AboutMe = () => {
             <Typography variant='body2' 
               className='contentAB'
               sx={{ letterSpacing: 10,fontSize: { xs:'30px', md:'60px'}, textAlign:'center',color:'#FF4D5A', fontWeigth:600   }} >
-              ABOUT ME <br/>
+              ABOUT ME
             </Typography>
             <Typography variant='body2' 
               className='contentAB'
               sx={{fontSize:{xs:'0.8rem',md: '1rem'}, pr:{xs:5, md:2},pb:3, pr:0.5  }} >
-            <br/>Hi! I'm Christian, a Front-end developer on constant formation with passion for technology and investigation.<br/>
-            My objectives are:<br/><br/>
+            Hi! I'm Christian, a Front-end developer on constant formation with passion for technology and investigation.<br/>
+            My objectives are:<br/>
             - Create friendly apps with great impact on the users<br/>
             - Be part of a team that alllows me to continue learning and growing professionally<br/><br/>
 
@@ -54,7 +54,7 @@ export const AboutMe = () => {
 
           </Grid>
           <Grid item xs={12} md={6} sx={{ zIndex:200,display:'flex', justifyContent:'center', alignItems:'center', }} >
-            <Box sx={{maxWidth:'50%',  }} >
+            <Box  sx={{maxWidth:'50%',  }} >
               <CardMedia
                 className='imageAB'
                 component='img'
