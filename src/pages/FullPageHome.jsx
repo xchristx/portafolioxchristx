@@ -14,7 +14,7 @@ export const FullPageHome = () => {
 
    return ( <ReactFullpage
     //fullpage options
-    scrollingSpeed = {900} /* Options here */
+    scrollingSpeed = {700} /* Options here */
     anchors={anchors}
     navigation
     css3

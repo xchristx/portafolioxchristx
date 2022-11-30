@@ -15,6 +15,7 @@
     "@fullpage/react-fullpage": "^0.1.31",
     "@mui/icons-material": "^5.10.15",
     "@mui/material": "^5.10.15",
+    "@mui/styles": "^5.10.16",
     "animate.css": "^4.1.1",
     "gsap": "^3.11.3",
     "prop-types": "^15.8.1",

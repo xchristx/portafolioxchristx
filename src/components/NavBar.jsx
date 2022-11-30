@@ -12,14 +12,28 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { capitalize, Link, Menu, MenuItem } from '@mui/material';
-import {Link as RouterLink} from 'react-router-dom'
+import { makeStyles } from '@mui/styles'
 
+import { useLocation, useNavigate, Navigate  } from 'react-router-dom';
 
 
 const drawerWidth = 240;
 const navItems = ['home', 'proyects', 'about Me', 'contact'];
 
+const useStyles = makeStyles ((theme) => ({
+  active: {
+    color:'#FF4D5A',
+    fontWeight:500,
+    borderBottom: '2px solid #FF4D5A'
+  }
+}));
+
 function NavBar (props) {
+
+  const location = useLocation();
+  const classes = useStyles();
+  const navigate = useNavigate();
+
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -28,17 +42,21 @@ function NavBar (props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', bgcolor:'white',zIndex:100 }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', color:'#FF4D5A' ,zIndex:100 }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+      CHRISTIAN
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
+              <Link 
+                sx={{ textAlign: 'center', width:'100%', textDecoration:'none', p:1 }}
+                href={`#${item.replace(' ','')}`}
+                className={location.hash === `#${item.replace(' ','')}` ? `${classes.active}` : "null"}
+                >
+                  {item}
+              </Link>
           </ListItem>
         ))}
       </List>
@@ -48,12 +66,13 @@ function NavBar (props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box id='menu-appbar'  sx={{ display: 'flex', }}>
-      <AppBar component="nav" sx={{ bgcolor:'transparent', color:'white', boxShadow:0, mt:2,}} >
+    <Box   sx={{ display: 'flex', }}>
+      <AppBar component="nav" sx={{ bgcolor:'transparent', boxShadow:0, mt:2,}} >
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
+            className='active'
             edge="start"
             onClick={handleDrawerToggle}
             sx={{ mr: 3, display: { sm: 'none' } }}
@@ -71,21 +90,26 @@ function NavBar (props) {
           <Box id='link' sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Link key={item} 
+                    className={location.hash === `#${item.replace(' ','')}` ? `${classes.active}` : "null"}
                     href={`#${item.replace(' ','')}`} 
                     data-menuanchor={`#${item.replace(' ','')}`} 
-                    className = "active"
-                    sx={{ color: '#fff', m:'10px', textDecoration:'none', fontSize:'23px' }}>
+                    sx={{ color: '#fff', m:'10px', textDecoration:'none', fontSize:'23px', fontWeight:300 }}>
                 {capitalize(item)}
               </Link>
             ))}
           </Box>
         </Toolbar>
       </AppBar>
-      <Box component="nav">
+      <Box component="nav" >
         <Drawer
           container={container}
           variant="temporary"
           id='menu-appbar'
+          PaperProps={{
+            sx: {
+              backgroundColor: "#220D0D",
+            }
+          }}
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
@@ -94,6 +118,7 @@ function NavBar (props) {
           sx={{
             display: { xs: 'block', sm: 'none',zIndex:500 },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            border:'2px solid black'
           }}
         >
           {drawer}
