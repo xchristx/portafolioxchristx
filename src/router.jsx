@@ -10,8 +10,7 @@ export const RouterApp = ()=>{
         <>
             <NavBar />
             <Routes>
-                <Route path="/" element={ <FullPageHome /> }  />
-
+                <Route path="/*" element={ <FullPageHome /> }  />
             </Routes>
         </>
     )

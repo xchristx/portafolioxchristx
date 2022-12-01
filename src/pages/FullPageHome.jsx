@@ -6,11 +6,25 @@ import { Home } from '../components/Home';
 import { Works } from '../components/Works';
 import { AboutMe } from '../components/AboutMe';
 import { Contact } from '../components/Contact';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const anchors = ["home", "proyects", "aboutMe",'contact'];
 
 
 export const FullPageHome = () => {
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+      
+      if ( !location.hash ){
+        navigate('/#home')
+      }
+
+
+    }, [location.hash])
+    
 
    return ( <ReactFullpage
     //fullpage options

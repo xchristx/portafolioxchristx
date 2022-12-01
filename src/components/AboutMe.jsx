@@ -41,7 +41,7 @@ export const AboutMe = () => {
             </Typography>
             <Typography variant='body2' 
               className='contentAB'
-              sx={{fontSize:{xs:'0.8rem',md: '1rem'}, pr:{xs:5, md:2},pb:3, pr:0.5  }} >
+              sx={{fontSize:{xs:'0.8rem',md: '1rem'}, pr:{xs:5, md:0.5},pb:3,  }} >
             Hi! I'm Christian, a Front-end developer on constant formation with passion for technology and investigation.<br/>
             My objectives are:<br/>
             - Create friendly apps with great impact on the users<br/>
@@ -59,7 +59,7 @@ export const AboutMe = () => {
                 className='imageAB'
                 component='img'
                 image={Chris}
-                sx={{objectFit:'cover', boxShadow: '0px 1px 8px 3px #0A95CF' }} 
+                sx={{objectFit:'cover', boxShadow: '0px 1px 8px 3px #0A95CF', }} 
               />
             </Box>
           </Grid>

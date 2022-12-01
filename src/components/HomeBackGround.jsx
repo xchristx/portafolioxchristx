@@ -1,6 +1,6 @@
 import { Box,  } from '@mui/material';
 import React from 'react';
-import './HomeBackGround.css'
+import './HomeBackGround.scss'
 export const HomeBackGround = ()=>{
     let hwMobile = 100;
     let hwDesktop = 300;
