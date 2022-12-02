@@ -6,10 +6,10 @@ export const HomeBackGround = ()=>{
     let hwDesktop = 300;
     let leftMobile = -50;
     let leftDesktop = -150;
-    let topMobile = 250;
+    let topMobile = 280;
     let topDesktop = 200; 
     return (
-        <Box id="container">
+        <Box id="container" position='absolute'>
             <Box id="container-inside">
                 <Box id="circle-small" 
                     sx={{ width: {xs:hwMobile, md:hwDesktop}, height: {xs:hwMobile, md:hwDesktop},top:{xs:topMobile, md:topDesktop}, left:{xs:leftMobile, md:leftDesktop}, }} 

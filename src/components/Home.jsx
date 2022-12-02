@@ -32,35 +32,34 @@ export const Home = ()=>{
     return(
         <>
             <HomeBackGround  sx={{position:'absolute'}} />
-            <Grid container sx={{ display: 'flex', textAlign:'center',  alignItems:'center', justifyContent:'center'}}  >
+            <Grid container sx={{ height:'100vh', display: 'flex', textAlign:'center',  alignItems:'center', justifyContent:'center'}}  >
                
-                <Grid item xs={12} md={6} sx={{zIndex:100 }}  >
+                <Grid item xs={12} md={6} sx={{zIndex:100}}  >
                     <Typography 
                      className='titleLeft'
-                     sx={{ opacity:1, fontSize: { xs:'25px', md:'80px'}, color:'#FF4D5A',fontWeight:500, position:{xs:'absolute', md:'static'}, top:{xs:20, md:0}, left:{xs:'50%', md:0}, transform: {xs:'translateX(-50%)', md: 'none'}  }} 
+                     sx={{fontSize: { xs:'30px',sm:'40px', md:'80px'}, color:'#FF4D5A',fontWeight:500, position:{xs:'absolute', md:'relative'}, top:{xs:40, sm:85, md:0}, left:{xs:'50%', md:0}, transform: {xs:'translateX(-50%)', md: 'none'}  }} 
                     >
                         PORTFOLIO
                     </Typography>
                 </Grid>
 
-                <Grid item xs={12} md={6} sx={{ height:'100vh', zIndex:100}}  >
+                <Grid item xs={12} md={6} sx={{zIndex:100, mt:{ xs:'-90%', sm:-25, md:0 }}}  >
                     <Stack>
                         <Typography variant='body1' 
                         className='titleRight'
-                        sx={{ textAlign:'start', pl:{xs:3,md:9} ,mt:15, fontWeight:500, fontSize: { xs:'40px', md:'5.1rem'},letterSpacing:{ xs:5, md:19}, }} >
+                        sx={{ textAlign:'start', pl:{ xs:3, sm:8, md:9 }, fontWeight:500, fontSize: { xs:'40px', sm:'55px', md:'5.1rem'}, letterSpacing:{ xs:5, md:19}, }} >
                             CHRISTIAN
                         </Typography>
                         <Typography variant='title' 
                             className='titleRight'
-                            sx={{  textAlign:'start',pl:{xs:3,md:9},fontWeight:500, fontSize: { xs:'35px', md:'4.5rem'}, letterSpacing:{ xs:5, md:19},mb:{xs:'15%', sm:'5%'} }} >
+                            sx={{ textAlign:'start', pl:{ xs:3, sm:8, md:9 }, fontWeight:500, fontSize: { xs:'35px', sm:'55px', md:'4.5rem'}, letterSpacing:{ xs:5, md:19}, mb:{xs:'5%', sm:'5%'} }} >
                             AGUILAR
                         </Typography>
                         <hr className="bookends content" />
                         <Typography variant='body2' 
                             className='content'
-                            sx={{  pl:{xs:3,md:10}, textAlign:'start',fontSize:'1.5rem',letterSpacing:2.5, mt:{xs:'15%', sm:'5%'} }} >
-                            Full Stack <br/>
-                            Passionate about front-end
+                            sx={{ pl:{ xs:3, sm:8, md:9 }, textAlign:'start',fontSize:'1.5rem',letterSpacing:2.5, mt:{xs:'5%', sm:'5%'} }} >
+                            Front End Developer
                         </Typography>
                     </Stack>
 

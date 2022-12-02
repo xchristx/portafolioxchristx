@@ -42,7 +42,7 @@ export const Works = ()=>{
                         HEALTHY SHOP
                     </Typography>
                     <hr className="bookends contentWorks" />
-                    <Button sx={{mt:'5%'}} >
+                    <Button sx={{mt:'5%'}} href='https://henryhealthy.shop/catalogo' target='_blank' >
                         Show me more
                     </Button>
                 </Stack>

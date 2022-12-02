@@ -42,7 +42,7 @@ function NavBar (props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', color:'#FF4D5A' ,zIndex:100 }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', color:'#F4F4F4' ,zIndex:100 }}>
       <Typography variant="h6" sx={{ my: 2 }}>
       CHRISTIAN
       </Typography>
