@@ -57,7 +57,12 @@ export const Works = ()=>{
                 </Box>
             </Box>
             <Box component='div' sx={{ display:{xs:'flex', sm:'none'}, position:'static',}} >
-
+                    <Typography 
+                     className='contentWorks'
+                     sx={{fontSize: '30px', color:'#FFF',fontWeight:500, position:'absolute', top:{xs:40,}, left:{xs:'50%',}, transform: {xs:'translateX(-50%)', md: 'none'}  }} 
+                    >
+                        WORKS
+                    </Typography>
                 <Box sx={{ width:'80%', height:'40%', top:'20%', position: 'absolute',  zIndex:20, left:'50%', transform: 'translateX(-50%)' }} >
                     <CardMedia
                             component='img'
