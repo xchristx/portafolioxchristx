@@ -79,7 +79,7 @@ export const Works = ()=>{
                         HEALTHY SHOP
                     </Typography>
                     <hr className="bookends contentWorks " />
-                    <Button className='contentWorks' >
+                    <Button className='contentWorks' href='https://henryhealthy.shop/catalogo' >
                         Show me more
                     </Button>
                 </Stack>
