@@ -28,6 +28,7 @@ export const FullPageHome = () => {
 
    return ( <ReactFullpage
     //fullpage options
+    gplv3-license
     scrollingSpeed = {700} /* Options here */
     anchors={anchors}
     navigation
@@ -51,7 +52,6 @@ export const FullPageHome = () => {
           </Box>
 
           <Box className="section" 
-                // sx={{ backgroundImage:`url(${FondoWorks})`, backgroundSize:'cover', zIndex:5 }} 
                 sx={{ zIndex:5, display:'flex', alignItems:'center', justifyContent:'center', width:'100vh' }} 
           >
             <Works />
@@ -61,7 +61,7 @@ export const FullPageHome = () => {
             <AboutMe />
           </Box>
 
-          <Box className="section" sx={{ bgcolor:'#0A0E18', zIndex:5 }}>
+          <Box className="section" >
             <Contact />
           </Box>
 

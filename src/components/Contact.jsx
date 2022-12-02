@@ -4,7 +4,7 @@ import { Box, Button, CardMedia, Divider, Grid, Typography,Stack, IconButton } f
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { gsap,Power3 } from 'gsap';
-import contact from '../assets/contact.jpg'
+import contact from '../assets/contact.png'
 import './AboutBackGroud.scss'
 import '../index.css'
 
@@ -42,8 +42,10 @@ export const Contact = ()=>{
                         sx={{ color:'#FF4D5A ', letterSpacing:10, fontSize: { xs:'40px', md:'80px'}, fontWeight:500,mb:'5%' }} >
                         GET IN TOUCH
                     </Typography>
-                    <hr className="bookends contentContact" />
-                    <Button sx={{justifyContent:'flex-start', mr:60}} >
+                    <Box sx={{width:'50%'}} >
+                        <hr className="bookends contentContact" />
+                    </Box>
+                    <Button sx={{justifyContent:'flex-start', mr:60, mt:'5%'}} href='mailto:christian.aguilar.dev@gmail.com' >
                       <Typography variant='body1' 
                           className='contentContact'
                           sx={{ color:'#fff ',letterSpacing:3, fontSize: { xs:'10px', sm:'25px'}, fontWeight:500}} >
@@ -86,7 +88,7 @@ export const Contact = ()=>{
                         sx={{ color:'#FF4D5A ', letterSpacing:4, fontSize: '29px', fontWeight:500, }} >
                         GET IN TOUCH
                     </Typography>
-                    <Button sx={{justifyContent:'flex-start',}} >
+                    <Button sx={{justifyContent:'flex-start',}} href='mailto:christian.aguilar.dev@gmail.com' >
                         <Typography variant='body1' 
                             className='contentContact'
                             sx={{ color:'#fff ',letterSpacing:1, textTransform:'lowercase', fontSize: '17px', fontWeight:500}} 

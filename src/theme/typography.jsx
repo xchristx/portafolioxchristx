@@ -1,4 +1,3 @@
-import FuturaTtf from '../fonts/FuturaLigth.ttf'
 // ----------------------------------------------------------------------
 
 export function remToPx(value) {

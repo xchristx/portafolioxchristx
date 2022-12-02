@@ -33,11 +33,11 @@ export const AboutMe = () => {
       <div className="stars"></div>
       <div className="twinkling"></div>
       <div className="clouds"></div>
-      <Grid container sx={{width:'91%'}} >
-          <Grid item xs={12} sm={6} sx={{ zIndex:20, pl:{xs:2, sm:10, md:15}}} >
+      <Grid container  >
+          <Grid item xs={12} sm={6} sx={{ zIndex:20, pl:{xs:4, sm:10, md:15,}}} >
             <Typography variant='body2' 
               className='contentAB'
-              sx={{ letterSpacing: 10,fontSize: { xs:'30px', md:'60px'}, textAlign:'center',color:'#FF4D5A', fontWeigth:600   }} >
+              sx={{ letterSpacing: 10,fontSize: { xs:'30px',sm:'30px', md:'60px'}, mt:2, textAlign:'center',color:'#FF4D5A', fontWeigth:600   }} >
               ABOUT ME
             </Typography>
             <Typography variant='body2' 
