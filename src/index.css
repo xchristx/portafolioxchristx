@@ -52,5 +52,5 @@ hr {
   right: -21px;
 }
 .fp-watermark a {
-  background-color: transparent;
+ display: none !important;
 }
