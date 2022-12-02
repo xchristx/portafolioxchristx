@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { Box, Divider, Grid, IconButton, Typography, Stack } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import FilePresentIcon from '@mui/icons-material/FilePresent';
 import { gsap,Power3 } from 'gsap';
 import { HomeBackGround } from './HomeBackGround';
 import '/animate.css'
@@ -68,10 +69,13 @@ export const Home = ()=>{
 
                     <Stack direction='row' sx={{zIndex:100, position: 'absolute', bottom:40,  right:27  }}  >
                         <IconButton  href='https://www.linkedin.com/in/christian-aguilar-dev/' target="_blank" >
-                        <LinkedInIcon sx={{color:'white', p:0,}} fontSize='large' />
+                            <LinkedInIcon sx={{color:'white', p:0,}} fontSize='large' />
                         </IconButton>
                         <IconButton  href='https://github.com/xchristx' target="_blank" >
-                        <GitHubIcon  sx={{color:'white', p:0}} fontSize='large' />
+                            <GitHubIcon  sx={{color:'white', p:0}} fontSize='large' />
+                        </IconButton>
+                        <IconButton  href='https://drive.google.com/file/d/1x7O-2je6B5T2Oi203Husjbtsu342f7Us/view' target="_blank" >
+                            <FilePresentIcon  sx={{color:'white', p:0}} fontSize='large' />
                         </IconButton>
                     </Stack>
 

@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { Box, Button, CardMedia, Divider, Grid, Typography,Stack, IconButton } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import FilePresentIcon from '@mui/icons-material/FilePresent';
 import { gsap,Power3 } from 'gsap';
 import contact from '../assets/contact.png'
 import './AboutBackGroud.scss'
@@ -19,7 +20,7 @@ export const Contact = ()=>{
             if (location.hash == '#contact'){
                 tl.from('.imageContact', { opacity: 0, duration:1, x:1000,  scaleX:0, scaleY:0,  stagger:0.3, ease: Power3.easeOut })
                 .from('.contentContact', {x:-100, y: '2rem', opacity: 0,duration:1, stagger:0.1, ease: Power3.easeIn }, '-=1.7')
-                .from('.iconsContact', {y:800, opacity: 0.5,duration:1.5, stagger:0.4, ease: Power3.easeIn }, '-=1.7')
+                .from('.iconsContact', {y:800, opacity: 0.5,duration:1, stagger:0.3, ease: Power3.easeIn }, '-=1')
             }else {
                 tl.to('.imageContact', { opacity: 0, duration:1, x:100, stagger:0.3, ease: Power3.easeOut })
                 .to('.contentContact', { x: '2rem', opacity: 0,duration:1, stagger:0.1, ease: Power3.easeIn }, '-=1.5')
@@ -59,6 +60,9 @@ export const Contact = ()=>{
                       <IconButton className='iconsContact' href='https://github.com/xchristx' target="_blank" >
                         <GitHubIcon  sx={{color:'white', p:0}} fontSize='large' />
                       </IconButton>
+                      <IconButton className='iconsContact' href='https://drive.google.com/file/d/1x7O-2je6B5T2Oi203Husjbtsu342f7Us/view' target="_blank" >
+                        <FilePresentIcon  sx={{color:'white', p:0}} fontSize='large' />
+                      </IconButton>
                     </Stack>
                 </Stack>
                 <Box sx={{ width:'50%', height:'60%', top:'20%', position: 'absolute',  zIndex:20, right:{xs:30,md:'5%'},  }} >
@@ -76,7 +80,7 @@ export const Contact = ()=>{
                 <Box sx={{ width:'80%', height:'40%', top:'20%', position: 'absolute',  zIndex:20, left:'50%', transform: 'translateX(-50%)',p:0,m:0 }} >
                     <CardMedia
                             component='img'
-                            className='images'
+                            className='imageContact'
                             src={contact}
                             sx={{ boxShadow:20, height:'100%',  }}
 
@@ -98,10 +102,13 @@ export const Contact = ()=>{
                     </Button>
                     <Stack direction='row' >
                       <IconButton href='https://www.linkedin.com/in/christian-aguilar-dev/' target="_blank" >
-                        <LinkedInIcon sx={{color:'white', p:0}} fontSize='large' />
+                        <LinkedInIcon className='iconsContact' sx={{color:'white', p:0}} fontSize='large' />
                       </IconButton>
                       <IconButton href='https://github.com/xchristx' target="_blank" >
-                        <GitHubIcon sx={{color:'white', p:0}} fontSize='large' />
+                        <GitHubIcon className='iconsContact' sx={{color:'white', p:0}} fontSize='large' />
+                      </IconButton>
+                      <IconButton  href='https://drive.google.com/file/d/1x7O-2je6B5T2Oi203Husjbtsu342f7Us/view' target="_blank" >
+                        <FilePresentIcon className='iconsContact' sx={{color:'white', p:0}} fontSize='large' />
                       </IconButton>
                     </Stack>
                 </Stack>
