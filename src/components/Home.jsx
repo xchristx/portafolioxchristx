@@ -74,7 +74,7 @@ export const Home = ()=>{
                         <IconButton  href='https://github.com/xchristx' target="_blank" >
                             <GitHubIcon  sx={{color:'white', p:0}} fontSize='large' />
                         </IconButton>
-                        <IconButton  href='https://drive.google.com/file/d/1x7O-2je6B5T2Oi203Husjbtsu342f7Us/view' target="_blank" >
+                        <IconButton  href='https://drive.google.com/file/d/1jL7MFxt66flWj6Jao_y0mc6nNFpuYwJw/view?usp=sharing' target="_blank" >
                             <FilePresentIcon  sx={{color:'white', p:0}} fontSize='large' />
                         </IconButton>
                     </Stack>
