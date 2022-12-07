@@ -47,12 +47,12 @@ export const AboutMe = () => {
             >
             Hi! I'm Christian, a Front-end developer on constant formation with passion for technology and investigation.<br/><br/>
             My objectives are:<br/>
-            <CheckCircleOutlineIcon sx={{pt:1, color:'#FF4D5A'}} /> Create friendly apps with great impact on the users<br/>
-            <CheckCircleOutlineIcon sx={{pt:1, color:'#FF4D5A'}} /> Be part of a team that alllows me to continue learning and growing professionally<br/><br/>
+            <CheckCircleOutlineIcon sx={{pt:1, color:'#FF4D5A'}} /> Create friendly apps with great impact on the users.<br/>
+            <CheckCircleOutlineIcon sx={{pt:1, color:'#FF4D5A'}} /> Be member of a team that allows me to continue learning and growing professionally.<br/><br/>
 
             What's the added value I offer? 🙌<br/><br/>
 
-            With me you'll get a programmer with great problem solving capacity, able to work in a team, proactive, that brings his ideas and will to surpass himself day after day.
+            With me you'll get a software developer with great problem solving capacity, with great teamwork ability, proactive, that brings his ideas and will to surpass himself day after day.
             </Typography>
 
           </Grid>

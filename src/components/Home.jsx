@@ -1,11 +1,11 @@
 import React, { useLayoutEffect, } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Box, Divider, Grid, IconButton, Typography, Stack } from '@mui/material';
+import { Box, Divider, Grid, IconButton, Typography, Stack, Badge } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import FilePresentIcon from '@mui/icons-material/FilePresent';
 import { gsap,Power3 } from 'gsap';
 import { HomeBackGround } from './HomeBackGround';
+import cvLogo from '../assets/cv.png';
 import '/animate.css'
 
 export const Home = ()=>{
@@ -74,8 +74,10 @@ export const Home = ()=>{
                         <IconButton  href='https://github.com/xchristx' target="_blank" >
                             <GitHubIcon  sx={{color:'white', p:0}} fontSize='large' />
                         </IconButton>
-                        <IconButton  href='https://drive.google.com/file/d/1jL7MFxt66flWj6Jao_y0mc6nNFpuYwJw/view?usp=sharing' target="_blank" >
-                            <FilePresentIcon  sx={{color:'white', p:0}} fontSize='large' />
+                        <IconButton  href='https://drive.google.com/file/d/1cNVOcY9J6GtwaMLruY8jwTluDGfjbLWJ/view?usp=sharing' target="_blank" >
+                            <Badge sx={{maxWidth:35, maxHeight:35}} >
+                                <img src={cvLogo} />
+                            </Badge>
                         </IconButton>
                     </Stack>
 
