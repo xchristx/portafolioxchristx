@@ -106,7 +106,7 @@ export const Home = () => {
           <Typography
             className="titleLeft"
             sx={{
-              fontSize: { xs: "30px", sm: "40px", md: "80px" },
+              fontSize: { xs: "30px", sm: "40px", md: "80px", xl: "120px" },
               color: "#FF4D5A",
               fontWeight: 500,
               position: { xs: "absolute", md: "relative" },
@@ -133,7 +133,7 @@ export const Home = () => {
                 textAlign: "start",
                 pl: { xs: 3, sm: 8, md: 9 },
                 fontWeight: 500,
-                fontSize: { xs: "40px", sm: "55px", md: "5.1rem" },
+                fontSize: { xs: "40px", sm: "55px", md: "5.1rem", xl: "8rem" },
                 letterSpacing: { xs: 5, md: 19 },
               }}
             >
@@ -146,7 +146,7 @@ export const Home = () => {
                 textAlign: "start",
                 pl: { xs: 3, sm: 8, md: 9 },
                 fontWeight: 500,
-                fontSize: { xs: "35px", sm: "55px", md: "4.5rem" },
+                fontSize: { xs: "35px", sm: "55px", md: "4.5rem", xl: "7rem" },
                 letterSpacing: { xs: 5, md: 19 },
                 mb: { xs: "5%", sm: "5%" },
               }}
@@ -160,7 +160,7 @@ export const Home = () => {
               sx={{
                 pl: { xs: 3, sm: 8, md: 9 },
                 textAlign: "start",
-                fontSize: "1.5rem",
+                fontSize: { xs: "1.5rem", xl: "3rem" },
                 letterSpacing: 2.5,
                 mt: { xs: "5%", sm: "5%" },
               }}

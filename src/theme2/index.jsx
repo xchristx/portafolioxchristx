@@ -3,18 +3,16 @@ import React, { useMemo } from "react";
 // @mui
 import { CssBaseline } from "@mui/material";
 import {
-  ThemeProvider as MUIThemeProvider,
   createTheme,
+  ThemeProvider as MUIThemeProvider,
   StyledEngineProvider,
 } from "@mui/material/styles";
 //
 import palette from "./palette";
-import shadows from "./shadows";
 import typography from "./typography";
-import GlobalStyles from "./globalStyles";
-import customShadows from "./customShadows";
 import breakpoints from "./breakpoints";
 import componentsOverride from "./overrides";
+import shadows, { customShadows } from "./shadows";
 
 // ----------------------------------------------------------------------
 
@@ -23,17 +21,18 @@ ThemeProvider.propTypes = {
 };
 
 export default function ThemeProvider({ children }) {
+  const isLight = "light";
+
   const themeOptions = useMemo(
     () => ({
-      palette,
-      shape: { borderRadius: 6 },
-      breakpoints,
-
+      palette: isLight ? palette.light : palette.dark,
       typography,
-      shadows: shadows(),
-      customShadows: customShadows(),
+      breakpoints,
+      shape: { borderRadius: 8 },
+      shadows: isLight ? shadows.light : shadows.dark,
+      customShadows: isLight ? customShadows.light : customShadows.dark,
     }),
-    []
+    [isLight]
   );
 
   const theme = createTheme(themeOptions);
@@ -43,7 +42,6 @@ export default function ThemeProvider({ children }) {
     <StyledEngineProvider injectFirst>
       <MUIThemeProvider theme={theme}>
         <CssBaseline />
-        <GlobalStyles />
         {children}
       </MUIThemeProvider>
     </StyledEngineProvider>

@@ -113,7 +113,7 @@ export const Contact = () => {
             sx={{
               color: "#FF4D5A ",
               letterSpacing: 10,
-              fontSize: { xs: "40px", md: "80px" },
+              fontSize: { xs: "40px", md: "80px", lg: "100px", xl: "130px" },
               fontWeight: 500,
               mb: "5%",
             }}
@@ -133,7 +133,7 @@ export const Contact = () => {
               sx={{
                 color: "#fff ",
                 letterSpacing: 3,
-                fontSize: { xs: "10px", sm: "25px" },
+                fontSize: { xs: "10px", sm: "25px", lg: "35px", xl: "45px" },
                 fontWeight: 500,
               }}
             >
