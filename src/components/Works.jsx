@@ -118,7 +118,7 @@ export const Works = ({ hashLocation, title, subtitle, img, link, oFit }) => {
             className="image"
             src={img}
             sx={{
-              height: "400px",
+              height: { xs: "200px", sm: "400px" },
               objectFit: oFit ? "contain" : "cover",
             }}
           />
