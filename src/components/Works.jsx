@@ -1,31 +1,22 @@
 import React, { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
-import {
-  Box,
-  Button,
-  CardMedia,
-  Divider,
-  Grid,
-  Typography,
-  Stack,
-} from "@mui/material";
+import { Box, Button, CardMedia, Grid, Typography, Stack } from "@mui/material";
 import { gsap, Power3 } from "gsap";
-import hsImg from "../assets/banner.png";
 import "./AboutBackGroud.scss";
 import "../index.css";
 
-export const Works = () => {
+export const Works = ({ hashLocation, title, subtitle, img, link, oFit }) => {
   const tl = gsap.timeline();
 
   const location = useLocation();
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      if (location.hash == "#proyects") {
+      if (location.hash == hashLocation) {
         tl.from(".image", {
           opacity: 0,
-          duration: 1,
-          x: 1000,
+          duration: 0.5,
+          x: -1000,
           scaleX: 0,
           scaleY: 0,
           stagger: 0.3,
@@ -42,53 +33,54 @@ export const Works = () => {
           },
           "-=1.7"
         );
-      } else {
-        tl.to(".image", {
-          opacity: 0,
-          duration: 0.7,
-          x: 100,
-          stagger: 0.3,
-          ease: Power3.easeOut,
-        }).to(
-          ".contentWorks",
-          {
-            x: "2rem",
-            opacity: 0,
-            duration: 0.6,
-            stagger: 0.1,
-            ease: Power3.easeIn,
-          },
-          "-=1.5"
-        );
       }
+      // else if (id === idActive) {
+      //   tl.to(".image", {
+      //     opacity: 0,
+      //     duration: 0.7,
+      //     x: 100,
+      //     stagger: 0.3,
+      //     ease: Power3.easeOut,
+      //   }).to(
+      //     ".contentWorks",
+      //     {
+      //       x: "2rem",
+      //       opacity: 0,
+      //       duration: 0.6,
+      //       stagger: 0.1,
+      //       ease: Power3.easeIn,
+      //     },
+      //     "-=1.5"
+      //   );
+      // }
     }, root);
 
     return () => ctx.revert();
-  }, [location.hash]);
+  }, [location]);
 
   return (
-    <Box>
+    <Box sx={{ overflow: "hidden" }}>
       <Grid
         container
         sx={{
-          display: { xs: "none", sm: "flex" },
           px: 5,
+          display: "flex",
+          flexDirection: { xs: "column-reverse", sm: "row" },
         }}
       >
-        <div className="stars twinkling"></div>
-        <Grid item sm={7}>
-          <Stack sx={{ zIndex: 30, border: "1px solid white" }}>
+        <Grid item xs={12} sm={7}>
+          <Stack sx={{ zIndex: 30, mt: { xs: 5, sm: 0 } }}>
             <Typography
               variant="body1"
               className="contentWorks"
               sx={{
                 color: "#fff ",
                 letterSpacing: 15,
-                fontSize: { xs: "30px", md: "60px" },
+                fontSize: { xs: "16px", sm: "30px", md: "60px" },
                 fontWeight: 500,
               }}
             >
-              e-commerce
+              {subtitle}
             </Typography>
             <Typography
               variant="body1"
@@ -96,46 +88,67 @@ export const Works = () => {
               sx={{
                 color: "#FF4D5A ",
                 letterSpacing: 10,
-                fontSize: { xs: "40px", md: "80px", lg: "80px", xl: "120px" },
+                fontSize: {
+                  xs: "29px",
+                  sm: "40px",
+                  md: "80px",
+                  lg: "80px",
+                  xl: "120px",
+                },
                 fontWeight: 500,
-                mb: "5%",
+                mb: "1%",
               }}
             >
-              HEALTHY SHOP
+              {title}
             </Typography>
             <hr className="bookends contentWorks" />
             <Button
-              sx={{ mt: "5%" }}
-              href="https://healthy.dkndrd.com/"
+              className=" contentWorks"
+              sx={{ mt: { xs: "2px", sm: "5%" }, fontSize: { xs: 13, sm: 16 } }}
+              href={link}
               target="_blank"
             >
               Show me more
             </Button>
           </Stack>
         </Grid>
-        <Grid item sm={5}>
+        <Grid item xs={12} sm={5}>
           <CardMedia
             component="img"
             className="image"
-            src={hsImg}
-            sx={{ boxShadow: 20, height: "100%" }}
+            src={img}
+            sx={{
+              boxShadow: 20,
+              height: "400px",
+              objectFit: oFit ? "contain" : "cover",
+            }}
           />
         </Grid>
+        <Grid item xs={12} sx={{ display: { xs: "flex", sm: "none" } }}>
+          <Typography
+            className="contentWorks"
+            sx={{
+              fontSize: "25px",
+              mb: 2,
+              color: "#FFF",
+              fontWeight: 500,
+            }}
+          >
+            WORKS
+          </Typography>
+        </Grid>
       </Grid>
-      <Box
-        component="div"
-        sx={{ display: { xs: "flex", sm: "none" }, position: "static" }}
-      >
+      {/* <Grid container sx={{ display: { xs: "flex", sm: "none" } }}>
         <Typography
           className="contentWorks"
           sx={{
             fontSize: "30px",
             color: "#FFF",
             fontWeight: 500,
-            // position: "absolute",
+            position: "absolute",
             top: { xs: 40 },
             left: { xs: "50%" },
-            // transform: { xs: "translateX(-50%)", md: "none" },
+            transform: { xs: "translateX(-50%)", md: "none" },
           }}
         >
           WORKS
@@ -145,7 +158,7 @@ export const Works = () => {
             width: "80%",
             height: "40%",
             top: "20%",
-            // position: "absolute",
+            position: "absolute",
             zIndex: 20,
             left: "50%",
             transform: "translateX(-50%)",
@@ -161,7 +174,7 @@ export const Works = () => {
         <Stack
           sx={{
             width: "80%",
-            // position: "absolute",
+            position: "absolute",
             zIndex: 30,
             left: "50%",
             transform: "translateX(-50%)",
@@ -200,7 +213,7 @@ export const Works = () => {
             Show me more
           </Button>
         </Stack>
-      </Box>
+      </Grid> */}
     </Box>
   );
 };

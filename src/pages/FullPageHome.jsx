@@ -7,6 +7,10 @@ import { Works } from "../components/Works";
 import { AboutMe } from "../components/AboutMe";
 import { Contact } from "../components/Contact";
 import { useLocation, useNavigate } from "react-router-dom";
+import "../components/AboutBackGroud.scss";
+import hsImg from "../assets/banner.png";
+import osImg from "../assets/orionsoft.png";
+import yvyImg from "../assets/yvy.png";
 
 const anchors = ["home", "proyects", "aboutMe", "contact"];
 
@@ -25,7 +29,7 @@ export const FullPageHome = () => {
       <ReactFullpage
         //fullpage options
         gplv3-license
-        scrollingSpeed={700} /* Options here */
+        scrollingSpeed={500} /* Options here */
         anchors={anchors}
         scrollOverflow
         horizontal
@@ -46,29 +50,39 @@ export const FullPageHome = () => {
                   <Home />
                 </Box>
 
-                <Box className="section" component="div">
+                <Box className="section">
+                  <div className="stars twinkling"></div>
                   <Box className="slide">
-                    <Works />
+                    <Works
+                      hashLocation={"#proyects"}
+                      title="HEALTHY SHOP"
+                      subtitle="e-commerce"
+                      link="https://healthy.dkndrd.com/catalogo"
+                      img={hsImg}
+                    />
                   </Box>
-
                   <Box className="slide">
-                    <Typography
-                      sx={{ zIndex: 400, fontSize: 50, color: "red" }}
-                    >
-                      asdasfasf
-                    </Typography>
+                    <Works
+                      hashLocation={"#proyects/1"}
+                      title="PLAN 21 YVY-APP"
+                      subtitle="dashboard"
+                      link="https://yvy-app-dev.s3-web.us-south.cloud-object-storage.appdomain.cloud/"
+                      img={yvyImg}
+                      oFit={true}
+                    />
                   </Box>
                   <Box className="slide">
-                    <Typography
-                      sx={{ zIndex: 400, fontSize: 50, color: "black" }}
-                    >
-                      asdasfasf
-                    </Typography>
+                    <Works
+                      hashLocation={"#proyects/2"}
+                      title="ORION SOFT"
+                      subtitle="dashboard"
+                      link="https://orion-soft.netlify.app/"
+                      img={osImg}
+                    />
                   </Box>
                 </Box>
-
-                <Box className="section" sx={{ bgcolor: "gray" }}>
-                  <AboutMe className="slide" />
+                <Box className="section">
+                  <AboutMe />
                 </Box>
 
                 <Box className="section">

@@ -55,14 +55,14 @@ hr {
  display: none !important;
 }
 .slide {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%    ;
+  height: 100vh !important;
+  display: flex !important ;
+  justify-content: center !important ;
+  align-items: center !important ;
 }
 .fp-controlArrow {
-  position: absolute;
+  position: absolute !important ;
   z-index: 4;
   top: 40% !important;
   cursor: pointer;
